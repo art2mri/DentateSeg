@@ -4,7 +4,7 @@
 
 Welcome to the **Cerebellar Dentate Nucleus Segmentation from QSM Images** project! This repository provides a deep learning pipeline designed to segment the dentate nucleus in Quantitative Susceptibility Mapping (QSM) images. The entire solution is containerized using Docker for seamless deployment.
 
-## Getting started
+## Getting started - Docker
 
 ### Requirements
 
@@ -51,7 +51,31 @@ Suppose that my QSM images are located at `C:/Users/John/qsm-data/`, my input QS
 docker run -it --rm --user $(id -u):$(id -g) --gpus=all -v C:/Users/John/qsm-data/:/dentateseg-storage diogohs/dentateseg:0.1.0 -i QSM-IMAGE-FILEPATH -o dentateseg-output --gpu
 ```
 
-#### Output
+## Getting started - Apptainer
+
+### Requirements
+
+Before running the segmentation pipeline, **Apptainer** must be installed or enabled on your operating system.
+
+Then, download the Docker image at the [Google Drive link](https://dub.sh/dentateseg-apptainer).
+Ensure that the name of the downloaded container image is `dentateseg.sif`.
+
+### Usage
+
+Once Apptainer is installed, you can run the segmentation pipeline using the following command:
+
+**Linux/Mac:**
+```bash
+apptainer run --pwd /app -B ~/path/to/your/QSM/images:/dentateseg-storage dentateseg.sif -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR
+```
+
+If you have an NVIDIA GPU available and correctly configured, add the flags `--nv` and `--gpu`. For instance, on Linux:
+
+```bash
+apptainer run --nv --pwd /app -B  ~/path/to/your/QSM/images:/dentateseg-storage dentateseg.sif -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR --gpu
+```
+
+## Output
 
 The segmented cerebellar dentate nucleus images will be saved in the specified output directory within your local machine.
 Suppose that your input image has the filename `QSM_image.nii.gz`. The following files will be created:
