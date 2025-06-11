@@ -57,7 +57,7 @@ docker run -it --rm --user $(id -u):$(id -g) --gpus=all -v C:/Users/John/qsm-dat
 
 Before running the segmentation pipeline, **Apptainer** must be installed or enabled on your operating system.
 
-Then, download the Docker image at the [Google Drive link](https://dub.sh/dentateseg-apptainer).
+Then, download the Docker image at the [Google Drive link](https://ggl.link/dentateseg-apptainer).
 Ensure that the name of the downloaded container image is `dentateseg.sif`.
 
 ### Usage
@@ -86,6 +86,7 @@ OUTPUT-DIR/
     ├── QSM_image_cerebellar_mask.nii.gz
     ├── QSM_image_cropped.nii.gz
     ├── QSM_image_cropped_seg.nii.gz
+    ├── QSM_image_cropped_seg_labeled.nii.gz
     ├── QSM_image_metadata.json
     └── QSM_image_seg.nii.gz
 ```
