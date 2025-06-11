@@ -1,7 +1,5 @@
 # DentateSeg
 
-🚧 Work in progress!
-
 Welcome to the **Cerebellar Dentate Nucleus Segmentation from QSM Images** project! This repository provides a deep learning pipeline designed to segment the dentate nucleus in Quantitative Susceptibility Mapping (QSM) images. The entire solution is containerized using Docker for seamless deployment.
 
 ## Getting started - Docker
@@ -14,7 +12,7 @@ If you chose to install the Docker Engine on Linux, perform the optional [post-i
 
 Then, download the Docker image:
 ```bash
-docker pull diogohs/dentateseg:0.1.0
+docker pull diogohs/dentateseg:0.2.0
 ```
 
 ### Usage
