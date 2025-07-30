@@ -21,18 +21,18 @@ Once Docker is installed, you can run the segmentation pipeline using the follow
 
 **Windows:**
 ```bash
-docker run -it --rm -v C:/path/to/your/QSM/images:/dentateseg-storage diogohs/dentateseg:0.1.0 -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR
+docker run -it --rm -v C:/path/to/your/QSM/images:/dentateseg-storage diogohs/dentateseg:0.2.0 -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR
 ```
 
 **Linux/Mac:**
 ```bash
-docker run -it --rm --user $(id -u):$(id -g) -v ~/path/to/your/QSM/images:/dentateseg-storage diogohs/dentateseg:0.1.0 -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR
+docker run -it --rm --user $(id -u):$(id -g) -v ~/path/to/your/QSM/images:/dentateseg-storage diogohs/dentateseg:0.2.0 -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR
 ```
 
 If you have an NVIDIA GPU available and correctly configured, add the flags `--gpus=all` and `--gpu`. For instance, on Windows:
 
 ```bash
-docker run -it --rm --gpus=all -v C:/path/to/your/QSM/images:/dentateseg-storage diogohs/dentateseg:0.1.0 -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR --gpu
+docker run -it --rm --gpus=all -v C:/path/to/your/QSM/images:/dentateseg-storage diogohs/dentateseg:0.2.0 -i QSM-IMAGE-FILEPATH -o OUTPUT-DIR --gpu
 ```
 
 #### Explanation of the command
@@ -46,7 +46,7 @@ docker run -it --rm --gpus=all -v C:/path/to/your/QSM/images:/dentateseg-storage
 Suppose that my QSM images are located at `C:/Users/John/qsm-data/`, my input QSM image is `QSM_image.nii.gz` and `dentateseg-output` is the output directory name. Then, the following command should be used for Linux/Mac with GPU support:
 
 ```bash
-docker run -it --rm --user $(id -u):$(id -g) --gpus=all -v C:/Users/John/qsm-data/:/dentateseg-storage diogohs/dentateseg:0.1.0 -i QSM-IMAGE-FILEPATH -o dentateseg-output --gpu
+docker run -it --rm --user $(id -u):$(id -g) --gpus=all -v C:/Users/John/qsm-data/:/dentateseg-storage diogohs/dentateseg:0.2.0 -i QSM-IMAGE-FILEPATH -o dentateseg-output --gpu
 ```
 
 ## Getting started - Apptainer
