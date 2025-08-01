@@ -17,6 +17,9 @@ function usage() {
     echo "  --gpu"
     echo "      Enable GPU support for processing. (Optional)"
     echo
+    echo "  --debug"
+    echo "      Enable debug mode for verbose output. (Optional)"
+    echo
     echo "  -h, --help"
     echo "      Display this help message and exit."
     echo
@@ -60,6 +63,10 @@ while [[ "$#" -gt 0 ]]; do
             USE_GPU=true
             shift
             ;;
+        --debug)
+            DEBUG_MODE=true
+            shift
+            ;;
         *)
             echo "Unknown parameter passed: $1"
             usage
@@ -85,9 +92,10 @@ if [ "$USE_GPU" = true ]; then
     CMD="$CMD --gpu"
 fi
 
-# dirname
-echo "dirname: $(dirname $0)"
+# Add debug flag if specified
+if [ "$DEBUG_MODE" = true ]; then
+    CMD="$CMD --debug"
+fi
 
 # Execute the command
-echo "Executing: $CMD"
 eval $CMD
