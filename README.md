@@ -115,7 +115,7 @@ The Excel (.xlsx) and CSV report files contain a statistical analysis report and
 
 If you use DentateSeg in your project, please cite:
 
-*Shiraishi, D. H.\*, Saha, S.\*, ... , Harding, I. H., Rezende T. J. R., TRACK-FA Neuroimaging Consortium. (\*co-first). ***Automated Deep Learning-based Segmentation of the Dentate Nucleus Using Quantitative Susceptibility Mapping MRI***. Radiology: Artificial Intelligence (2025). https://doi.org/10.1148/ryai.240478*
+*Shiraishi, D. H.\*, Saha, S.\*, ... , Harding, I. H., Rezende, T. J. R., TRACK-FA Neuroimaging Consortium. (\*co-first). ***Automated Deep Learning-based Segmentation of the Dentate Nucleus Using Quantitative Susceptibility Mapping MRI***. Radiology: Artificial Intelligence (2025). https://doi.org/10.1148/ryai.240478*
 
 ## Acknowledgments
 
