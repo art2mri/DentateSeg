@@ -124,3 +124,10 @@ This project was supported by the [Friedreich's Ataxia Research Alliance](https:
 ## Contact
 
 For any questions or suggestions, please open an issue on the GitHub repository or [contact us](mailto:diogohshiraishi@gmail.com).
+
+
+<p align="center">
+  <a href="https://mapmyvisitors.com/web/1c3jk">
+    <img src="https://mapmyvisitors.com/map.png?cl=0e1633&w=384&t=tt&d=mZonDOf4Sqmt8KwyD37jlJOLRUViWbBTuGPkC5_V3YE&co=0b4975&ct=cdd4d9" width="384" />
+  </a>
+</p>
